@@ -12,13 +12,14 @@
 ### Запуск приложения
 Клонировать репозиторий:
 ```commandline
-gh repo clone https://github.com/PATH-TO/REPOSITORY
+gh repo clone https://github.com/amoglock/Menu_management
 ```
 Для запуска приложения в командной строке ввести:
 ```commandline
 docker compose up
 ```
 После запуска, документация Swagger доступна по адресу: http://0.0.0.0:8000/docs#/
+![](https://github.com/amoglock/images/blob/main/menu_management_swagger.png?raw=true)
 ***
 #### Зависимости
 * У меню есть подменю, которые к ней привязаны.
