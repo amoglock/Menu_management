@@ -12,8 +12,9 @@
 ### Запуск приложения
 Клонировать репозиторий:
 ```commandline
-gh repo clone https://github.com/amoglock/Menu_management
+git clone https://github.com/amoglock/Menu_management
 ```
+Открыть репозиторий в IDE.<br>
 Для запуска приложения в командной строке ввести:
 ```commandline
 docker compose up
