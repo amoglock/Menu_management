@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  fastapi_test_test:
+    container_name: fastapi_test_test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env-non-dev
+    entrypoint: sh -c "pytest -v -s tests/"
+    networks:
+      - ylab_network
+    ports:
+      - 8001:8001
+
+
+networks:
+  ylab_network:
+    name: ylab_network
+volumes:
+  postgres_data:
+  shared-volume:

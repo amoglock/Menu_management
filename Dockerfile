@@ -1,15 +1,13 @@
-FROM python:3.10
+FROM python:3.10-slim
 
-RUN mkdir /fastapi_app
+RUN mkdir /fastapi_ylab
+WORKDIR /fastapi_ylab
 
-WORKDIR /fastapi_app
-
-COPY requirements.txt .
-
-RUN pip install -r requirements.txt
+COPY ./requirements.txt .
+RUN pip install --upgrade pip && pip install -r requirements.txt --no-cache-dir
 
 COPY . .
 
-RUN chmod a+x docker/*.sh
+#WORKDIR src
 
-# CMD gunicorn main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind=0.0.0.0:8000
+#CMD gunicorn main:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind=0.0.0.0:8000

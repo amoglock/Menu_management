@@ -7,7 +7,7 @@
 
 ***
 В проекте реализован REST API по работе с меню ресторана.<br>
-Даны 3 сущности: Меню, Подменю, Блюдо.
+Даны 3 сущности: меню, подменю, блюдо.
 
 ### Запуск приложения
 Клонировать репозиторий:
@@ -17,10 +17,15 @@ git clone https://github.com/amoglock/Menu_management
 Открыть репозиторий в IDE.<br>
 Для запуска приложения в командной строке ввести:
 ```commandline
-docker compose up
+docker compose up --build
 ```
 После запуска, документация Swagger доступна по адресу: http://0.0.0.0:8000/docs#/
-![](https://github.com/amoglock/images/blob/main/menu_management_swagger.png?raw=true)
+
+Чтобы запустить тесты, при запущенном приложении в командной строке ввести:
+```commandline
+docker compose -f docker-compose-test.yml up --build
+```
+
 ***
 #### Зависимости
 * У меню есть подменю, которые к ней привязаны.
